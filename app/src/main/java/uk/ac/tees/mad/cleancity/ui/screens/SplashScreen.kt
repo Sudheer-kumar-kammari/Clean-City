@@ -282,3 +282,87 @@ private fun LoadingDot(scale: Float) {
 //private fun SplashScreenPreview() {
 //    SplashScreen()
 //}
+
+
+@Preview(showBackground = true, name = "CleanCity – Splash Screen")
+@Composable
+fun SplashScreenPreview() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        Color(0xFF4CAF50),
+                        Color(0xFF2E7D32),
+                        Color(0xFF1B5E20)
+                    )
+                )
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.padding(32.dp)
+        ) {
+            // App Icon with circular background
+            Box(
+                modifier = Modifier
+                    .size(200.dp)
+                    .background(
+                        color = Color.White.copy(alpha = 0.15f),
+                        shape = CircleShape
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Recycling,
+                    contentDescription = "CleanCity Logo",
+                    tint = Color.White,
+                    modifier = Modifier.size(140.dp)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            // App Name
+            Text(
+                text = "CleanCity",
+                fontSize = 42.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Tagline
+            Text(
+                text = "Keep Your City Clean",
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color.White.copy(alpha = 0.9f),
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(48.dp))
+
+            // Animated Loading Dots
+            LoadingDots()
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            // Bottom Message
+            Text(
+                text = "Making our environment better",
+                fontSize = 14.sp,
+                color = Color.White.copy(alpha = 0.7f),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(bottom = 32.dp)
+            )
+        }
+    }
+}
+

@@ -99,7 +99,7 @@ fun AppNavigation(modifier: Modifier = Modifier) {
                 "reportId argument is missing in IssueDetailScreen route"
             }
 
-            IssueDetailScreen(reportId = reportId)
+            //IssueDetailScreen(reportId = reportId)
         }
 
 
