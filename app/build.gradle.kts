@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -90,6 +91,14 @@ dependencies {
 
     // notification
     implementation("com.google.accompanist:accompanist-permissions:0.31.1-alpha")
+
+
+    // Location Services
+    implementation("com.google.android.gms:play-services-location:21.1.0")
+    implementation("com.cloudinary:cloudinary-android:2.5.0")
+
+    // geohash
+    implementation("com.firebase:geofire-android-common:3.2.0")
 
 
 }
